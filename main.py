@@ -92,7 +92,7 @@ elif onglet == "les fonctions":
   con3.code("""print("bonjour, et salut", ficus)""")
   con3.write("ce code affichera :")
   con3.code("""bonjour, et salut ficus""")
-
+  #rien
 
 elif onglet == "les différentes fonctions natives":
   st.title("Les différentes fonctions natives")
