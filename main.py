@@ -13,7 +13,7 @@ onglet = st.sidebar.selectbox("**Onglet** (vous pouvez chercher dans la barre :)
            "Home",
            "les variables",
            "les fonctions",
-           "les differentes fonction natives"
+           "les différentes fonctions natives"
           ]
          )
 
@@ -22,91 +22,104 @@ if onglet == "Home":
   con1 = st.container()
 
   con1.markdown("""
-**Dogy est un language de programmation interpreté codé en C comme d'autres
-language comme pythone, javascript, php, etc...**
+**Dogy est un langage de programmation interprété codé en C, comme d'autres
+langages tels que Python, JavaScript, PHP, etc...**
 """)
 
-  con1.write("vous pouvez choisir les differentes documentation sur les coté .")
+  con1.write("Vous pouvez choisir les différentes documentations sur les côtés.")
+
+
+
+
 
 elif onglet == "les variables":
-  st.title("les variables")
+  st.title("Les variables")
 
   con2 = st.container()
   con2.write(
     """
-    en dogy, les variable peuvent etre declarée ou modifier comme ceci :
+    En Dogy, les variables peuvent être déclarées ou modifiées comme ceci :
     """)
 
   con2.code("""
     a = 5
     ou
-    b = dogy
+    b = Dogy
     """)
-  
+
   con2.write("""
-  on y acceder en mettant leurs nom entre gillemé (")
+  On y accède en mettant leurs noms entre guillemets (")
   """)
-  
+
   con2.code("""print("a")""")
 
-  con2.write("ce code affichera :")
+  con2.write("Ce code affichera :")
   con2.code(5)
 
   con2.markdown("""
-l'interpreteur reconnait le type d'une vaiable automatiquement .\n
-Et si je veux 5 comme un string me diriez vous ?\n
-Et bien le dogy ne fais pas de difference\n
-entre les deux donc pas besoin de s'enbeter avec ca !\n
+L'interpréteur reconnaît le type d'une variable automatiquement.\n
+Et si je veux 5 comme une chaîne de caractères me direz-vous ?\n
+Eh bien, le Dogy ne fait pas de différence\n
+entre les deux, donc pas besoin de s'embêter avec ça !\n
 """)
 
+
+
+
 elif onglet == "les fonctions":
-  st.title("les fonctions")
+  st.title("Les fonctions")
 
   con3 = st.container()
   con3.write(
   """
-  **en dogy, il y a des fonctions native (heuresement :) que je detaillerait plus bas.
-  quand une fonction retourne quelque chose, comme la fonction input() qui lit l'entrée de l'utilisateur,
-  elle 'met' la valeur dans une variable nommé "output" .
-  cette variable est normale et peut etre utilisé dans d'autre fonctions ou dans le code principal.
-  exemple :**
+  **En Dogy, il y a des fonctions natives (heureusement :) que je détaillerai plus bas.
+  Quand une fonction retourne quelque chose, comme la fonction input() qui lit l'entrée de l'utilisateur,
+  elle 'met' la valeur dans une variable nommée "output".
+  Cette variable est normale et peut être utilisée dans d'autres fonctions ou dans le code principal.
+  Exemple :**
   """)
-  
+
   con3.code("""
   input(entrez votre nom svp :)
 
   print(bonjour, "output")
   """)
 
-  con3.write("si j'entre 'ficus', ce code affichera :")
+  con3.write("Si j'entre 'ficus', ce code affichera :")
   con3.code("""bonjour ficus """)
 
-elif onglet == "les differentes fonction natives":
-  st.title("les differentes fonction natives")
+  con3.write("Et si vous desirez afficher une virgule, vous pouvez mettre votre message entre guillemets :")
+  con3.code("""print("bonjour, et salut", ficus)""")
+  con3.write("ce code affichera :")
+  con3.code("""bonjour, et salut ficus""")
+
+
+elif onglet == "les différentes fonctions natives":
+  st.title("Les différentes fonctions natives")
 
   con4 = st.container()
-  select = con4.selectbox("**choisissez une fonction natives**", 
+  select = con4.selectbox("**Choisissez une fonction native**", 
                           [
                             "input", "print"
                           ])
 
   if select == "input":
     con4.write("**input()**\n")
-    con4.write("cette fonction permet de lire l'entrée de l'utilisateur")
-    con4.write("**exemple :**")
+    con4.write("Cette fonction permet de lire l'entrée de l'utilisateur.")
+    con4.write("**Exemple :**")
     con4.code("""
     input(entrez un nombre)
     print("output")
     """)
-    con4.write("si j'entre '42', ce code affichera :")
+    con4.write("Si j'entre '42', ce code affichera :")
     con4.code("""42""")
   elif select == "print":
     con4.write("**print()**\n")
-    con4.write("cette fonction permet d'afficher un message")
-    con4.write("**exemple :**")
+    con4.write("Cette fonction permet d'afficher un message.")
+    con4.write("**Exemple :**")
     con4.code("""
     print(hello world)
     """)
 
-    con4.write("ce code afficheras :")
+    con4.write("Ce code affichera :")
     con4.code("""hello world""")
